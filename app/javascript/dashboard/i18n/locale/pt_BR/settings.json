@@ -10,7 +10,7 @@
     "PASSWORD_UPDATE_SUCCESS": "A sua senha foi alterada com sucesso",
     "AFTER_EMAIL_CHANGED": "Seu perfil foi atualizado com sucesso. Faça login novamente, pois suas credenciais de login foram alteradas",
     "FORM": {
-      "PICTURE": "Profile Picture",
+      "PICTURE": "Imagem de Perfil",
       "AVATAR": "Imagem de Perfil",
       "ERROR": "Por favor, corrija os erros",
       "REMOVE_IMAGE": "Excluir",
@@ -18,7 +18,7 @@
       "UPDATE_IMAGE": "Atualizar Imagem",
       "PROFILE_SECTION": {
         "TITLE": "Perfil",
-        "NOTE": "Seu endereço de e-mail é sua identidade e é usado para fazer login."
+        "NOTE": "Seu endereço de e-mail define sua identidade e é usado para fazer login."
       },
       "SEND_MESSAGE": {
         "TITLE": "Tecla de atalho para enviar mensagens",
@@ -58,15 +58,15 @@
       "ACCESS_TOKEN": {
         "TITLE": "Token de acesso",
         "NOTE": "Esse token pode ser usado se você estiver criando uma integração baseada em API",
-        "COPY": "Copy"
+        "COPY": "Copiar"
       },
       "AUDIO_NOTIFICATIONS_SECTION": {
         "TITLE": "Notificações de Áudio",
         "NOTE": "Habilitar notificações de áudio no painel para novas mensagens e conversas.",
         "ALERT_TYPES": {
-          "NONE": "None",
-          "MINE": "Assigned",
-          "ALL": "All"
+          "NONE": "Nenhuma",
+          "MINE": "Atribuídas",
+          "ALL": "Todas"
         },
         "ALERT_TYPE": {
           "TITLE": "Tipo de Alerta:",

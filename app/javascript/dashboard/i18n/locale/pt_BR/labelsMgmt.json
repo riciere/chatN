@@ -45,7 +45,7 @@
         "DESELECT": "Desmarcar etiqueta",
         "DISMISS": "Descartar sugestão"
       },
-      "POWERED_BY": "Chatwoot AI",
+      "POWERED_BY": "Whapy AI",
       "DISMISS": "Recusar",
       "ADD_SELECTED_LABELS": "Adicionar etiquetas selecionadas",
       "ADD_SELECTED_LABEL": "Adicionar etiqueta selecionada",
@@ -76,7 +76,7 @@
         "TITLE": "Confirmar exclusão",
         "MESSAGE": "Você tem certeza que deseja excluir ",
         "YES": "Sim, excluir ",
-        "NO": "Não, Mantenha "
+        "NO": "Não, Manter "
       }
     }
   }

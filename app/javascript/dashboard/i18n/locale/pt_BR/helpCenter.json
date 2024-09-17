@@ -249,13 +249,13 @@
         "DOMAIN": {
           "LABEL": "Domínio personalizado",
           "PLACEHOLDER": "Domínio personalizado do portal",
-          "HELP_TEXT": "Adicione somente se você quiser usar um domínio personalizado para seus portais. Por exemplo: https://example.com",
+          "HELP_TEXT": "Adicione somente se você quiser usar um domínio personalizado para seus portais. Por exemplo: https://examplo.com.br",
           "ERROR": "Insira uma URL de domínio válida"
         },
         "HOME_PAGE_LINK": {
           "LABEL": "Link da Página Inicial",
           "PLACEHOLDER": "Link da página inicial do portal",
-          "HELP_TEXT": "O link usado para retornar do portal para a página inicial. Ex: https://example.com",
+          "HELP_TEXT": "O link usado para retornar do portal para a página inicial. Ex: https://examplo.com.br",
           "ERROR": "Digite uma URL de página inicial válida"
         },
         "THEME_COLOR": {
@@ -385,8 +385,8 @@
         "SLUG": {
           "LABEL": "Slug",
           "PLACEHOLDER": "Categoria de slug para URLs",
-          "HELP_TEXT": "app.chatwoot.com/hc/my-portal/en-US/categories/my-slug",
-          "ERROR": "Slug é obrigatório"
+          "HELP_TEXT": "app.whapy.com.br/hc/minha-slug",
+          "ERROR": "Um Slug é obrigatório"
         },
         "DESCRIPTION": {
           "LABEL": "Descrição",
@@ -416,8 +416,8 @@
         "SLUG": {
           "LABEL": "Slug",
           "PLACEHOLDER": "Categoria de slug para URLs",
-          "HELP_TEXT": "app.chatwoot.com/hc/my-portal/en-US/categories/my-slug",
-          "ERROR": "Slug é obrigatório"
+          "HELP_TEXT": "app.whapy.com.br/hc/categorias/minha-slug",
+          "ERROR": "Um Slug é obrigatório"
         },
         "DESCRIPTION": {
           "LABEL": "Descrição",
@@ -457,8 +457,8 @@
     },
     "UPGRADE_PAGE": {
       "TITLE": "Centro de Ajuda",
-      "DESCRIPTION": "Crie portais de autoatendimento amigáveis ao usuário. Ajude seus usuários a acessar os artigos e obter suporte 24/7. Atualize sua assinatura para habilitar essa função.",
-      "SELF_HOSTED_DESCRIPTION": "Crie portais de autoatendimento amigáveis ao usuário. Ajude seus usuários a acessar os artigos e obter suporte 24/7. Por favor, contate seu administrador para habilitar essa função.",
+      "DESCRIPTION": "Crie portais de autoatendimento amigáveis ao usuário. Ajude seus usuários a acessar os artigos e obter suporte 24/7.",
+      "SELF_HOSTED_DESCRIPTION": "Crie portais de autoatendimento amigáveis ao usuário. Ajude seus usuários a acessar os artigos e obter suporte 24/7. Por favor, contate nosso suporte para habilitar essa função.",
       "BUTTON": {
         "LEARN_MORE": "Saiba mais",
         "UPGRADE": "Atualize"

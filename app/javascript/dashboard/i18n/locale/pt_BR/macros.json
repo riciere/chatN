@@ -37,7 +37,7 @@
       "CONFIRM": {
         "MESSAGE": "Você tem certeza que deseja excluir ",
         "YES": "Sim, excluir",
-        "NO": "Não"
+        "NO": "Não, manter"
       },
       "API": {
         "SUCCESS_MESSAGE": "Macro excluída com sucesso",

@@ -1,6 +1,6 @@
 class ConversationReplyMailer < ApplicationMailer
   include ConversationReplyMailerHelper
-  default from: ENV.fetch('MAILER_SENDER_EMAIL', 'Chatwoot <accounts@chatwoot.com>')
+  default from: ENV.fetch('MAILER_SENDER_EMAIL', 'Whapy <suporte@whapy.com.br>')
   layout :choose_layout
 
   def reply_with_summary(conversation, last_queued_id)
@@ -34,7 +34,6 @@ class ConversationReplyMailer < ApplicationMailer
 
     init_conversation_attributes(message.conversation)
     @message = message
-#new code
     @previous_message = @conversation.messages.chat.where.not(id: message).last
     reply_mail_object = prepare_mail(true)
     message.update(source_id: reply_mail_object.message_id)
@@ -47,8 +46,8 @@ class ConversationReplyMailer < ApplicationMailer
 
     @messages = @conversation.messages.chat.select(&:conversation_transcriptable?)
 
-    Rails.logger.info("Email sent from #{from_email_with_name} \
-      to #{to_email} with subject #{@conversation.display_id} \
+    Rails.logger.info("Email enviado de #{from_email_with_name} \
+      para #{to_email} com assunto #{@conversation.display_id} \
       #{I18n.t('conversations.reply.transcript_subject')} ")
     mail({
            to: to_email,
@@ -137,67 +136,5 @@ class ConversationReplyMailer < ApplicationMailer
     sender_name(@channel.email)
   end
 
-  def parse_email(email_string)
-    Mail::Address.new(email_string).address
-  end
-
-  def inbox_from_email_address
-    return @inbox.email_address if @inbox.email_address
-
-    @account.support_email
-  end
-
-  def custom_message_id
-    last_message = @message || @messages&.last
-
-    "<conversation/#{@conversation.uuid}/messages/#{last_message&.id}@#{channel_email_domain}>"
-  end
-
-  def in_reply_to_email
-    conversation_reply_email_id || "<account/#{@account.id}/conversation/#{@conversation.uuid}@#{channel_email_domain}>"
-  end
-
-  def conversation_reply_email_id
-    content_attributes = @conversation.messages.incoming.last&.content_attributes
-
-    if content_attributes && content_attributes['email'] && content_attributes['email']['message_id']
-      return "<#{content_attributes['email']['message_id']}>"
-    end
-
-    nil
-  end
-
-  def cc_bcc_emails
-    content_attributes = @conversation.messages.outgoing.last&.content_attributes
-
-    return [] unless content_attributes
-    return [] unless content_attributes[:cc_emails] || content_attributes[:bcc_emails]
-
-    [content_attributes[:cc_emails], content_attributes[:bcc_emails]]
-  end
-
-  def to_emails_from_content_attributes
-    content_attributes = @conversation.messages.outgoing.last&.content_attributes
-
-    return [] unless content_attributes
-    return [] unless content_attributes[:to_emails]
-
-    content_attributes[:to_emails]
-  end
-
-  def to_emails
-    # if there is no to_emails from content_attributes, send it to @contact&.email
-    to_emails_from_content_attributes.presence || [@contact&.email]
-  end
-
-  def inbound_email_enabled?
-    @inbound_email_enabled ||= @account.feature_enabled?('inbound_emails') && @account.inbound_email_domain
-                                                                                      .present? && @account.support_email.present?
-  end
-
-  def choose_layout
-    return false if action_name == 'reply_without_summary' || action_name == 'email_reply'
-
-    'mailer/base'
-  end
 end
+ 
