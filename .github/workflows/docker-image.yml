@@ -2,29 +2,6 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "develop" ]
-  pull_request:
-    branches: [ "develop" ]
-
-jobs:
-
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-# #
-# # This action will publish Chatwoot CE docker image.
-# # This is set to run against merges to develop, master
-# # and when tags are created.
-# #
-
-name: Publish a docker image
-on:
-  push:
     branches:
       - develop
       - master
