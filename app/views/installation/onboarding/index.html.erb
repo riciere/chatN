@@ -37,7 +37,7 @@
                   Nome da Empresa
                 </label>
                 <div class="mt-1">
-                  <%= text_field :user, :company, placeholder: "Digite o nome da sua empresa. Ex: Corporação Wayne", required: true, class: "block w-full rounded-md border-0 px-3 py-3 appearance-none shadow-sm ring-1 ring-inset text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-woot-500 sm:text-sm sm:leading-6 outline-none dark:bg-slate-700 dark:ring-slate-600 dark:focus:ring-woot-500 ring-slate-200" %>
+                  <%= text_field :user, :company, placeholder: "Digite o nome da sua empresa. Ex: Minha Empresa Corp", required: true, class: "block w-full rounded-md border-0 px-3 py-3 appearance-none shadow-sm ring-1 ring-inset text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-woot-500 sm:text-sm sm:leading-6 outline-none dark:bg-slate-700 dark:ring-slate-600 dark:focus:ring-woot-500 ring-slate-200" %>
                 </div>
               </div>
 
@@ -46,7 +46,7 @@
                   Email
                 </label>
                 <div class="mt-1">
-                  <%= email_field :user, :email, placeholder: "Digite seu endereço de email corporativo. Ex: silvio@waynecorp.com.br", required: true, class: "block w-full rounded-md border-0 px-3 py-3 appearance-none shadow-sm ring-1 ring-inset text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-woot-500 sm:text-sm sm:leading-6 outline-none dark:bg-slate-700 dark:ring-slate-600 dark:focus:ring-woot-500 ring-slate-200" %>
+                  <%= email_field :user, :email, placeholder: "Digite seu endereço de email corporativo. Ex: silvio@minhaempresa.com.br", required: true, class: "block w-full rounded-md border-0 px-3 py-3 appearance-none shadow-sm ring-1 ring-inset text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-woot-500 sm:text-sm sm:leading-6 outline-none dark:bg-slate-700 dark:ring-slate-600 dark:focus:ring-woot-500 ring-slate-200" %>
                 </div>
               </div>
 
@@ -55,4 +55,23 @@
                   Senha
                 </label>
                 <div class="mt-1">
-                  <%= password_field :user, :password, placeholder: "Digite uma senha com 6 caracteres ou mais.", required: true, class: "block w-full rounded-md
+                <%= password_field :user, :password, placeholder: "Digite uma senha com 6 ou mais caracteres.", required: true, class: "block w-full rounded-md border-0 px-3 py-3 appearance-none shadow-sm ring-1 ring-inset text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-woot-500 sm:text-sm sm:leading-6 outline-none dark:bg-slate-700 dark:ring-slate-600 dark:focus:ring-woot-500 ring-slate-200" %>
+                </div>
+              </div>
+
+              <div class="text-sm text-slate-900">
+                <%= check_box_tag "subscribe_to_updates", 'true', true %>
+                <label class="ml-2" for="subscribe_to_updates">
+                  Assine notas de lançamento, boletins informativos e pesquisas de feedback de produtos.
+                </label>
+              </div>
+
+              <button type="submit" class="flex items-center w-full justify-center rounded-md bg-woot-500 py-3 px-3 text-base font-medium text-white shadow-sm hover:bg-woot-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-woot-500 cursor-pointer">
+              Concluir Configurações
+              </button>
+            </div>
+          <% end %>
+      </main>
+    </div>
+  </body>
+</html>
