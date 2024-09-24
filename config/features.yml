@@ -89,6 +89,9 @@
   enabled: false
 - name: captain_integration
   enabled: false
+- name: custom_roles
+  enabled: false
+  premium: true
 - name: hide_all_chats_for_agent
   enabled: false
 - name: hide_contacts_for_agent
@@ -119,3 +122,5 @@
   enabled: false
 - name: channel_api
   enabled: true
+- name: wavoip
+  enabled: false
